@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;  
+}
+
+        /*------Header-----*/
+header{
+    position: relative;
+    height: 100px;
+    background: #333;
+}
+header a:hover,a{
+    text-decoration: none;
+}
+header>img{
+    position: absolute;
+    left: 20%;
+    width: 100px;
+    height: 80px;
+    margin: 10px 0px;
+    border-right: 1px solid; 
+}
+header ul{
+    position: absolute;
+    left: 800px; 
+    top: 35px;
+    text-align: center;
+    width: 600px;
+}
+header ul input{
+    width: 250px;
+    color: #333;
+    border: 1px solid;
+    border-radius: 10px;
+    outline: none;
+    padding: 2px 5px;
+}
+header ul li{
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header a:hover{
+    color: orangered;
+}
+
+        /*------Login------*/
+#Login:hover #formLogin{
+    display: block;
+}
+#formLogin{
+    color: black;
+    background:whitesmoke;
+    border: 1px solid;
+    text-align: left;
+    font-size: 90%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+#btnLogin{
+    width: 100px;
+    height: 30px;
+    margin: 10px 0;
+}
+#formLogin input{
+    border:  1px solid;
+    border-radius: 4px;
+    outline: none;
+    padding: 5px;
+}        
+
+        /*------Nav--------*/
+nav a{
+    color:#333;
+}  
+nav a:hover{
+    text-decoration: none;
+}      
+nav{
+    background: gainsboro;
+    margin-bottom: 10px;
+    text-align: center;
+}
+nav ul{
+    width: 1200px;
+    margin: 0 auto;
+}
+nav li{
+    cursor: pointer;
+    font-size: 140%;
+    font-weight: bold;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 3em; 
+    padding: 5px;
+    transition-duration: 0.3s;
+}
+
+nav a:hover{
+    color: orangered;
+}
+#product{
+    margin-right: 15em;
+}
+        /*--------Sub 1---------*/
+#sub_item1{
+    padding-bottom: 20px;
+    margin-top: 7px;
+    display: none;
+    position: absolute;;
+    z-index: 1;
+    width: 200px;
+    background: gainsboro;
+    text-align: left;
+    transition-duration: 2s;
+}
+#sub_item1 li{
+    font-size: 80%;
+    margin-left: 0.5em;
+    display: block; 
+}
+nav li:hover #sub_item1{
+    display: block;
+}
+        /*----------Sub_2-------*/
+.sub_item2{
+    display: none;
+    z-index: 1;
+    width: 150px;
+    background:gainsboro;
+    text-align: left;
+}
+.sub_item2 li{
+    font-size: 90%;
+    padding-left: 1em;
+    display: block; 
+}
+#sub_item1 li:hover .sub_item2{
+    display: block;
+}
+        /*------Footer------*/
+footer{
+    height: 115px;
+    margin-top: 15px;
+    clear: both;
+    background: #333;
+}
+footer img{
+    margin: 10px;
+    width: 80px;
+    height: 60px;
+}
+footer img,#info{
+    float: left;
+}
+footer p{
+    clear: both;
+    color: white;
+    margin: 1em 0;
+}

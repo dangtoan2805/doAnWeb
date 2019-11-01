@@ -1,0 +1,84 @@
+main{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
+}
+main p{
+    color: red;
+    font-size: 130%;
+}
+main img:hover{
+    transform: scale(1.05,1.05);
+}
+main img{
+    transition-duration: 0.5s;
+}
+       /*-----List------*/
+#list{
+    float: left;
+    width: 800px;
+}
+#list>h3{
+    text-align: center;
+    color: orangered;
+}
+
+#list img{
+    width: 250px;
+    height: 250px;
+}
+#list tr td{
+    text-align: center;
+    padding: 10px;
+}
+
+#list a{
+    color: #333;
+    text-decoration: none;
+}
+
+        /*-----Side-----*/
+#side{
+    float: right;
+    width: 300px;
+}
+#side li{
+    padding: 10px 0px;
+    position: relative;
+    border-bottom: 1px solid;
+}
+.img,.content{
+    display: inline-block;
+}
+#side img{
+    width: 100px;
+    height: 100px;
+}
+
+#side>h3{
+    color: orangered;
+    padding-bottom: 5px;
+    font-size: 150%;
+    border-bottom: 1px solid;
+}
+#side a{
+    color: #333;
+}
+#side a:hover h1{
+    color: orangered;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    padding: 10px;
+}
+        /*More*/
+#more{
+    text-align: center;
+    font-size: 120%;
+}
+#more:hover a{
+    color: orangered;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laptop Dell Vostro 5481</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/detail_product.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function login(){
+                var user=document.getElementById("txtUser").value;
+                var pass=document.getElementById("txtPass").value;
+                if(user==""){
+                    alert("User không được trống !");
+                    return false;
+                }
+                else if(pass==""){
+                    alert("Password không được trống !");
+                    return false;
+                }
+                else{
+                    alert("Xin chào, "+user+". Chúc bạn có một ngày tốt lành !");
+                }
+            }
+            function change(name){
+                document.getElementById("img").src=name;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" width="100">
+            <ul style="list-style-type: none">
+                <li><input id="txtSearch" type="text"></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')" ><img src="images/search.png" width="17"></a></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')" ><img src="images/bag.png" width="17"></a></li>
+                <li id="Login"><a >Đăng nhập</a>
+                    <div id="formLogin">
+                        <p>Tài khoản:</p>
+                        <input type="text" id="txtUser" width="80">
+                        <p>Mật khẩu:</p>
+                        <input type="password" id="txtPass" width="80">
+                        <input id="btnLogin" onclick="return login()" type="submit" value="Đăng nhập">
+                    </div>
+                </li>
+                <li ><a>|</a></li>
+                <li><a href="SignUp.html">Đăng kí</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li id="product"></a>Sản Phẩm</a>
+                    <ul id="sub_item1" >
+                        <li><a href="Laptop.html">Laptop</a>
+                            <ul class="sub_item2">
+                                <li><a href="Asus.html">Asus</a></li>
+                                <li><a href="Dell.html">Dell</a></li>
+                                <li><a href="HP.html">Hp</a></li>
+                                <li><a href="Lenovo.html">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Phone.html">Điện Thoại</a>
+                            <ul class="sub_item2">
+                                <li><a href="Samsung.html">SamSung</a></li>
+                                <li><a href="Nokia.html">Nokia</a></li>
+                                <li><a href="Vsmart.html">Vs Mart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tablet.html">Tablet</a>
+                            <ul class="sub_item2">
+                                <li><a href="Tablet_ss">SamSung</a></li>
+                                <li><a href="Tablet_hw">Huewai</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="Other.html">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Trang Chủ</a></li>
+                <li><a href="SaleOff.html">Khuyến mãi</a></li>
+                <li><a href="ListNews.html">Tin Tức</a></li>
+                <li><a href="Contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main>            
+            <div id="img_products">
+                <div id="root_img">
+                    <img id="img" src="new/detail_product1.jpg">
+                </div>            
+                <div id="sub_img">
+                    <img onclick="change('new/detail_product1.jpg')" src="new/detail_product1.jpg">
+                    <img onclick="change('new/detail_product2.jpg')" src="new/detail_product2.jpg">
+                    <img onclick="change('new/detail_product3.jpg')" src="new/detail_product3.jpg">
+                    <img onclick="change('new/detail_product4.jpg')" src="new/detail_product4.jpg">
+                    <img onclick="change('new/detail_product5.jpg')" src="new/detail_product5.jpg">
+                </div>
+            </div>
+            <div id="side">
+                <h2>Laptop Dell Vostro 5481 </h2>
+                <p>Mã: 5481-V4I5229W</p>
+                <hr>
+                <p><b>CPU: </b>Intel Core i5-8265U ( 1.6 GHz - 3.9 GHz / 6MB / 4 nhân, 8 luồng ) </p>
+                <p><b>Màn hình: </b>14" IPS (1980x1080) Full HD</p>
+                <p><b>RAM: </b>1 x 4GB DDR4 2400MHz</p>
+                <p><b>Đồ họa: </b>Intel UHD Graphics 620 </p>
+                <p><b>Lưu trữ: </b>1TB HHD 5400RPM</p>
+                <p><b>Pin: </b>3 Cell 42Wh</p>
+                <p><b>HDH: </b>Windows 10 Home SL 64bit</p>
+                <p><b>Khối lượng: </b>1.6 kg</p>
+                <hr>
+                <p><b>Giá: </b><del>17.990.000 VND</del></p>
+                <p>Chỉ còn <b style="color: red">17.490.000 VND</b> khi đặt online</p>
+                <a href="bag.html"><h3 id="buy">Mua ngay</h3></a>
+            </div>
+            <article>
+                <div id="content">
+                    <h3>Thông tin chi tiết<h3>
+                    <h4><b>Giới thiệu</b></h4>
+                    <p>Với thiết kế luôn giữ được sự đơn giản nhưng hiệu quả mà dòng laptop làm việc này mang lại thật sự đáng tìm hiệu. Luôn nắm bắt được công nghệ tiên tiến, người dùng luôn được trải nghiệm những công nghệ mới mà Dell mang lại, sử dụng màn hình với tấm nền chống chối, chống lóa mang lại cho người dùng trải nghiệm cả trong môi trường có nắng, tăng thời gian sử dụng liên tục cho người dùng hạn chế mỏi mắt. Sử dụng chip Intel thế hệ cao cập nhật các chế độ mới và mang đến hiệu năng tốt hơn.</p>
+                    <p>Dung lượng lớn giúp người dùng sở hữu 1 kho giải trí rộng lớn hơn và được tặng kèm 1 bản Office củng cố khả năng làm việc của người dùng được tốt hơn, sau khi cài đặt thành công người dùng sẽ không còn phải “thấp thoảng lo âu” nỗi lo virus do các phần mềm office crack chứa nhiều mã độc. Đặc biệt, sử dụng chip đồ họa cao hơn các dòng máy tầm trung khác mang lại được sự trải nghiệm tốt hơn các ứng dụng đáp ứng cho công việc cũng như tăng thêm phần thú vị trong thời gian giải trí. Hỗ trợ bảo mật vân tay giúp người dùng có thể lưu trữ thông tin tốt hơn, an toàn hơn chỉ với 1 lần chạm.</p>
+                    <img src="new/detail_product1.jpg" width="720px">
+                    <p><b>Chi tiết về cấu hình và thiết kế của Laptop Dell Vostro 5481-V4I5229W</b></p>
+                    <p><b>Màn hình: </b>Sử dụng tấm nền IPS với điểm mạnh nằm ở góc nhìn rộng, chống lóa hỗ trợ người dùng có thể nhìn từ nhiều góc độ cũng như sử dụng ngay trong môi trường có ánh nắng trực tiếp. Với độ bền cao hơn, duy trì tuôi thọ sản phẩm lâu hơn, bền bỉ hơn cùng độ phân giải 1920 x 1080 với hình ảnh chuẩn Full HD được gói gọn trong kích thước 14 inch mang đến trải nghiệm hình ảnh sắc nét.</p>
+                    <p><b>CPU: </b>Sử dụng chip Intel Core i5-8265U đáp ứng được hầu hết tất cả các tiêu chuẩn ứng dụng hiện nay. i5-8265U thuộc thế hệ thứ 8 với độ xung nhịp 1.6 GHz – 3.9 GHz với 4 nhân 8 luồng mang lại tốc độ xử lý tiêu chuẩn cung cấp “không gian” làm việc đảm bảo giúp người dùng được trải nghiệm chuyên sâu. Không đơn giản là để đáp ứng ứng dụng, độ xung nhịp lớn cũng giúp người dùng chạy đa nhiệm tốt hơn và mang đến sự mượt mà với nhiều tab trên nền các trình duyệt.</p>
+                    <p><b>RAM: </b> 4GB DDR4 2400MHz thuộc dạng tương đối lớn, ngoài những giây phút làm việc căng thẳng người dùng có thể tận hưởng những khoảng thời gian giải trí nhẹ nhàng. Với 4GB ram người dùng có thể thoải mái chơi các game có cấu hình tương đối đủ để đáp ứng với mức tối thiểu của các dạng game lớn. Với 2 khe cắm hỗ trợ tối đa người dùng lên đến 32GB. Tìm hiểu thêm thì DDR4 được xem như là sự nâng cấp từ DDR3. DDR4 được ra mắt với hiệu năng làm việc cao hơn , tiêu thụ ít điện năng hơn bên cạnh 1 vài chức năng khác của được nâng cấp và cải tiến. Giảm thiểu 40% điện năng, sở hữu tính năng kiểm tra phần dư tuần hoàn (CRC) để thực thi nhiệm vụ kiểm tra đường truyền và giải quyết mang lại tính an toàn của dữ liệu, phát hiện tính chẵn lẻ trên chip nhằm xác thực tính toàn vẹn của dữ liệu, bên cạnh đó còn thực hiện 1 vài tính năng RAS mạnh mẽ khác.</p>
+                    <p><b>CRAD đồ họa: </b>Intel UHD Graphics 620 thuộc dòng chip cải tiến nâng cao khả năng làm việc so với 520, với thử nghiệm qua 3D Mark Cloud Gate( đánh giá về khả năng xử lý đồ họa game)Intel HD Graphics 620 nhanh hơn khoảng 7% so với dòng 520 trước đó. Ngoài ra điểm manh nhất Intel UHD Graphics có chính là nằm ở tính năng xem Video có độ phân giải 4K. Hỗ trợ cho mình cả 2 tiêu chuẩn đồ họa Open GL và DirectX được áp dụng nhiều trong các trò chơi điện tử, mô phỏng, thực tế ảo,...</p>
+                    <img src="new/detail_product2.jpg" width="720px">
+                    <p><b>Lưu trữ: </b>Với 1TB HDD 5400RPM, 1TB tương đương với 1000 GB giúp người dùng có thể tận hưởng 1 không gian số “rộng rãi” của riêng mình. Bên cạnh các dữ liệu về công việc, người dùng có thể tận dụng dung lượng lớn để trải nghiệm giải trí bằng game hay là hàng trăm bộ phim khác. Ngoài 1 cổng 2,5” SATA người dùng có thể nâng cấp tốc độ của máy bằng 1 cổng có chuẩn cắm m.2 SATA NVMe được trang bị bên trong.</p>
+                    <p><b>Kết nối: </b>1 cổng USB Type C, 2 cổng USB 3.0, 1 cổng USB 2.0 hỗ trợ người dùng với nhiều cổng kết nối tạo điều kiện trải nghiệm nhiều thiết bị ngoại vi cùng lúc hơn. Bắt kịp thời đại tốc độ cao bổ sung 1 cổng Type C giúp người dùng được hưởng tốc độ cao hơn mỗi khi truyền tải dung lượng qua cổng. Bên cạnh đó 1 cổng SD card cũng luôn giúp truyền thông tin từ thẻ nhớ vào máy trở nên dễ dàng hơn. Audio combo giúp giảm thiểu các khe cắm nhưng vẫn đưa về trải nghiệm tối ưu nhất của tai nghe và mic.</p>
+                    <img src="new/detail_product3.jpg" width="720px">
+                    <p><b>Kết luận: </b>Dell Vostro 5481-V4I5229W sở hữu đầy đủ các yếu tố giúp người dùng thuận tiện và dễ dàng hơn trong khi làm việc, ngoài ra bảo mật vân tay và đèn led dành cho bàn phím cũng là “cánh tay đắc lực” giúp Dell Vostro 5581 được lựa chọn nhiều hơn. Tích hợp card SSD giúp người dùng có thể nhận được trải nghiệm tốt nhất về tốc độ cho máy.</p>
+                
+                </div>
+                <div id="right">
+                    <h3>Cấu hình chi tiết</h3>
+                    <table>
+                        <tr>
+                            <td style="width:150px">Thời gian bảo hành</td>
+                            <td>12 tháng</td>
+                        </tr>
+                        <tr>
+                            <td>Thương hiệu</td>
+                            <td>Dell</td>
+                        </tr>
+                        <tr>
+                            <td>Series Laptop</td>
+                            <td>Vostro</td>
+                        </tr>
+                        <tr>
+                            <td>Màu sắc</td>
+                            <td>Xám đen</td>
+                        </tr>
+                        <tr>
+                            <td>Màn hình</td>
+                            <td>14" IPS ( 1920 x 1080 ) không cảm ứng , Màn hình chống lóa</td>
+                        </tr>
+                        <tr>
+                            <td>CPU</td>
+                            <td>Intel Core i5-8265U ( 1.6 GHz - 3.9 GHz / 6MB / 4 nhân, 8 luồng )Dell</td>
+                        </tr>
+                        <tr>
+                            <td>Thế hệ CPU</td>
+                            <td>Intel Core thế hệ thứ 8</td>
+                        </tr>
+                        <tr>
+                            <td>Dòng CPU</td>
+                            <td>Core i5</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>1 x 4GB DDR4 2400MHz ( 2 Khe cắm / Hỗ trợ tối đa 32GB )</td>
+                        </tr>
+                        <tr>
+                            <td>Card đồ họa</td>
+                            <td>Intel UHD Graphics 620</td>
+                        </tr>
+                        <tr>
+                            <td>Cổng kết nối</td>
+                            <td>1 x USB Type C / DisplayPort , 2 x USB 3.1 , 1 x USB 2.0 , 1 x SD card slot , Audio combo , LAN 100 Mbps</td>
+                        </tr>
+                        <tr>
+                            <td>Lưu trữ</td>
+                            <td>1TB HDD 5400RPM</td>
+                        </tr>
+                        <tr>
+                            <td>Kết nối không dây</td>
+                            <td>WiFi 802.11ac , Bluetooth 4.2</td>
+                        </tr>
+                        <tr>
+                            <td>Bàn phím</td>
+                            <td>thường , không phím số , LED</td>
+                        </tr>
+                        <tr>
+                            <td>Hệ đều hành</td>
+                            <td>Windows 10 Home SL 64-bit + Office Personal 365</td>
+                        </tr>
+                        <tr>
+                            <td>Kích thước</td>
+                            <td>32.4 x 23.2 x 1.87 cm</td>
+                        </tr>
+                        <tr>
+                            <td>Pin</td>
+                            <td> 3 cell 42Wh, Pin liền</td>
+                        </tr>
+                        <tr>
+                            <td>Khối lượng</td>
+                            <td>1.6 kg</td>
+                        </tr>
+                        <tr>
+                            <td>Bảo mật</td>
+                            <td>Vân tay</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <div id="comment">
+                    <h3>Phản hồi về sản phẩm</h3>
+                    <ul style="list-style-type: none">
+                        <li>
+                            <p><b>Hoàng Nam</b> - 14/06/2019</p>
+                            <p>Máy sử dụng rất tốn, đáp ứng các nhu cầu công việc tốt.</p>
+                        </li>
+                        <li>
+                            <p><b>Văn Toàn</b> - 12/06/2019</p>
+                            <p>Máy chỉ sử dụng để làm office, chơi game hơi lag vì không có card đồ họa, tốt trong tầm giá.</p>
+                        </li>
+                        <li>
+                            <p><b>Kim Phượng</b> - 9/06/2019</p>
+                            <p>Rất hài lòng.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="feelback">
+                            <h3>Gửi phản hồi:</h3>
+                            <p>Họ tên: </p>
+                            <input type="text">
+                            <p>Nội dung:</p>
+                            <textarea></textarea>
+                 </div>
+                        <div id="relate">
+                                <h3>Sản phẩm khác</h3>
+                                <ul>
+                                    <li>
+                                        <a>
+                                            <img src="item2.png">
+                                            <h3>Laptop Dell</h3>
+                                            <p>5.000.000 VND</p>
+                                        </a>               
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="item2.png">
+                                            <h3>Laptop Dell</h3>
+                                            <p>5.000.000 VND</p>
+                                        </a>               
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="item2.png">
+                                            <h3>Laptop Dell</h3>
+                                            <p>5.000.000 VND</p>
+                                        </a>               
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <img src="item2.png">
+                                            <h3>Laptop Dell</h3>
+                                            <p>5.000.000 VND</p>
+                                        </a>               
+                                    </li>
+                                </ul>
+                            </div>
+            </article>           
+        </main>
+        <footer>
+            <img src="images/logo.png">
+            <div id="info">
+                <p>Trang bán thiết bị điện tử uy tính, chất lượng.</p>
+                <p>Địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TPHCM - Hotline: 0123456789 </p>
+            </div>
+            <p style="text-align: center">&copy by Nhóm 21, June 2019</p>
+        </footer>
+    </body>
+</html>

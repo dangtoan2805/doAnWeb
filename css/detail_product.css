@@ -1,0 +1,142 @@
+main{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    cursor: pointer;
+}
+
+        /*Side*/
+#side{
+    float: right;
+    width: 550px;
+    font-size: 120%;
+}
+        /*Img*/
+#img_products{
+    float: left;
+    width: 550px;
+    text-align: center;
+}
+#root_img img{
+    width: 500px;
+    height: 350px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#root_img{
+    width: 500px;
+    height: 400px;
+}
+#sub_img img{
+    width: 80px;
+    height: 50px;
+    transition-duration: 0.5s;
+}
+#sub_img{
+    padding: 10px;
+    border-top: 1px solid;
+    display: inline-block;
+}
+#sub_img img:hover{
+    transform: scale(1.1,1.1);
+}
+        /*Buy*/
+#side a:hover{
+    text-decoration: none;
+}
+#buy{
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background: orangered;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#buy:hover{
+    background: brown;
+}
+            /*Relate*/
+#relate{ 
+    clear: both;
+    height: 350px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 110%;
+}
+#relate a{
+    color: black;
+}
+#relate p{
+    color: red;
+}
+#relate a:hover{
+    text-decoration: none;
+}
+#relate img{
+    width: 180px;
+    height: 180px;
+    transition-duration: 0.5s;
+}
+#relate ul li{
+    color: black;
+    display: inline-block;
+    margin: 20px;
+}
+#relate img:hover{
+    transform: scale(1.1,1.1);
+}
+
+            /*Article*/
+article{
+    clear: both;
+    padding-top: 20px;
+}
+#content{
+    width: 720px;
+    float: left;
+    line-height: 25px;
+    font-size: 130%;
+    text-align: justify;
+}
+#content img{
+    padding-bottom: 10px;
+}
+#right{
+    width: 400px;
+    float: right;
+    height: 500px;
+}
+        /*---Right--*/
+#right table td{
+    border-bottom:1px solid; 
+    padding: 10px; 
+}
+        /*---Comment---*/
+#comment{
+    margin-top: 20px;
+    clear: both;
+    font-size: 120%;
+    background: whitesmoke;
+}
+#comment>h3{
+    padding: 10px;
+    color: orangered;
+}
+#comment li{
+    padding: 5px;
+    margin-left: 20px;
+}
+            /*--FeelBack---*/
+
+#feelback{
+    font-size: 120%;
+}
+#feelback>input{
+    width: 400px;
+}
+#feelback>textarea{
+    width: 400px;
+    height: 100px;
+}

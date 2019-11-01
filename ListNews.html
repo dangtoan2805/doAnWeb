@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tin tức mới</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/listNew.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            function login(){
+                var user=document.getElementById("txtUser").value;
+                var pass=document.getElementById("txtPass").value;
+                if(user==""){
+                    alert("User không được trống !");
+                    return false;
+                }
+                else if(pass==""){
+                    alert("Password không được trống !");
+                    return false;
+                }
+                else{
+                    alert("Xin chào, "+user+". Chúc bạn có một ngày tốt lành !");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" width="100">
+            <ul style="list-style-type: none">
+                <li><input id="txtSearch" type="text"></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/search.png" width="17"></a></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/bag.png" width="17"></a></li>
+                <li id="Login"><a >Đăng nhập</a>
+                    <div id="formLogin">
+                        <p>Tài khoản:</p>
+                        <input type="text" id="txtUser" width="80">
+                        <p>Mật khẩu:</p>
+                        <input type="password" id="txtPass" width="80">
+                        <input id="btnLogin" onclick="return login()" type="submit" value="Đăng nhập">
+                    </div>
+                </li>
+                <li ><a>|</a></li>
+                <li><a href="SignUp.html">Đăng kí</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li id="product"></a>Sản Phẩm</a>
+                    <ul id="sub_item1" >
+                        <li><a href="Laptop.html">Laptop</a>
+                            <ul class="sub_item2">
+                                <li><a href="Asus.html">Asus</a></li>
+                                <li><a href="Dell.html">Dell</a></li>
+                                <li><a href="HP.html">Hp</a></li>
+                                <li><a href="Lenovo.html">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Phone.html">Điện Thoại</a>
+                            <ul class="sub_item2">
+                                <li><a href="Samsung.html">SamSung</a></li>
+                                <li><a href="Nokia.html">Nokia</a></li>
+                                <li><a href="Vsmart.html">Vs Mart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tablet.html">Tablet</a>
+                            <ul class="sub_item2">
+                                <li><a href="Tablet_ss">SamSung</a></li>
+                                <li><a href="Tablet_hw">Huewai</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="Other.html">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Trang Chủ</a></li>
+                <li><a href="SaleOff.html">Khuyến mãi</a></li>
+                <li><a href="ListNews.html">Tin Tức</a></li>
+                <li><a href="Contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="slide/dien-thoai-redmi-k20-pro-1.jpg" style="width: 100%;height: 450px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-7.jpg" style="width: 100%;height: 450px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-2.jpg" style="width: 100%;height: 450px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-9.jpg" style="width: 100%;height: 450px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-12.jpg" style="width: 100%;height: 450px;">
+                        </div>
+                    </div> 
+            </div>
+            
+            <ul id="listNews" style="list-style-type: none">
+                <h1>Tin tức mới</h1>
+                <li>
+                    <a href="Detail_new.html"> 
+                    <div class="img"><img src="item/new/img_new1.jpg"></div>
+                    <div class="content">
+                        <h1>HTC có thể sắp hồi sinh thương hiệu Wildfire</h1>
+                        <p>Theo trang Mobil Telefon của Nga, gần đây HTC đã được cấp phép phát hành tổng cộng 10 thiết bị mới dưới thương hiệu Wildfire. Cụ thể, các mẫu máy này được HTC đặt tên như sau: Wildfire E, Wildfire E Plus, Wildfire E1... </p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new2.jpg"></div>
+                    <div class="content">
+                        <h1>Giảm 2 triệu cho Galaxy S10|S10+ </h1>
+                        <p>Các tín đồ Samsung sẽ được giảm ngay 2 triệu đồng khi chọn mua Galaxy S10 | S10+ tại shop với mã ưu đãi trên ứng dụng Quà tặng Galaxy.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new3.jpg"></div>
+                    <div class="content">
+                        <h1>Tổng hợp deal khuyến mãi</h1>
+                        <p>Bàn Phím Chơi Game Rog Asus Strix Flare RGB Aura Sync USB giá bán 3.990.000đ giảm còn 2.849.000đ<br><br>Màn Hình 2K Meze 27 Inch QHD 60Hz giá bán 6.000.000đ giảm còn 3.499.000đ</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new4.jpg"></div>
+                    <div class="content">
+                        <h1>Lenovo Z6 lộ ảnh thực tế trên Weibo</h1>
+                        <p>Đúng như các thông tin rò rỉ trước đó, Lenovo mới đây vừa chính thức trình làng mẫu flagship mới nhất của hãng, có tên là Z6 Pro.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new5.jpg"></div>
+                    <div class="content">
+                        <h1>Lễ ra mắt Oppo Reno tại Việt Nam</h1>
+                        <p>Oppo Reno định vị là sản phẩm chiến lược ở phân khúc cận cao cấp của hãng trong năm 2019, mức giá dự kiến trên 10 triệu đồng.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new6.jpeg"></div>
+                    <div class="content">
+                        <h1>Vì sao Google quyết định lộ hình Pixel 4 thời điểm này?</h1>
+                        <p>Google đang làm một điều rất khác với truyền thống của cả ngành di động: lộ hình chính thức của một sản phẩm chưa được ra mắt, cái mà trước đây thường được bảo mật bằng mọi giá.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new7.webp"></div>
+                    <div class="content">
+                        <h1>Huawei giới thiệu Y9 Prime 2019 với thiết kế đột phá, cấu hình mạnh mẽ</h1>
+                        <p>Không chỉ chạy Android với đầy đủ các tính năng của Google, smartphone mới của Huawei còn có cấu hình mạnh mẽ, các tính năng vượt trội trong phân khúc tầm trung.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new8.jpg"></div>
+                    <div class="content">
+                        <h1>Hãng chuyên thu mua smartphone cũ tuyên bố Samsung Galaxy S10 mất tới hơn 50% giá trị chỉ trong 30 ngày</h1>
+                        <p>Mới đây, BankMyCell, trang web chuyên thu mua smartphone cũ, đã xuất bản một báo cáo chi tiết về mức độ mất giá của các mẫu flagship tới từ Samsung và Apple.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new9.jpg"></div>
+                    <div class="content">
+                        <h1>Số lượng iPhone xuất xưởng tới thị trường Châu Âu sụt giảm ở mức báo động</h1>
+                        <p>Trung Quốc có thể là tâm điểm của việc doanh số iPhone sụt giảm những quý gần đây, nhưng đó không phải là thị trường duy nhất mà Apple đang gặp khó khăn. Theo báo cáo mới nhất của IDC, iPhone xuất xưởng tới thị trường Châu Âu, Trung Đông và Châu Phi đã sụt giảm 22,7%.</p>
+                    </div>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#"> 
+                    <div class="img"><img src="item/new/new10.jpg"></div>
+                    <div class="content">
+                        <h1>Nhà bán lẻ dừng bán Bphone 3, chuẩn bị cho Bphone 4 ra mắt tháng 8?</h1>
+                        <p>Bphone 3 được BKAV ra mắt hồi tháng 10/2018 với hai phiên bản Bphone 3 tầm trung giá 6.99 triệu đồng và Bphone 3 Pro cận cao cấp giá 9.99 triệu đồng. Đã 8 tháng trôi qua và nhiều người trông đợi BKAV sẽ tung ra phiên bản Bphone mới, tuy nhiên tính đến thời điểm hiện tại vẫn chưa có bất kỳ thông tin nào  về Bphone 4.</p>
+                    </div>
+                    </a>    
+                </li>             
+            </ul>
+            <div id="side">
+                <h1>Các tin liên quan</h1>
+                <ul style="list-style-type: none">
+                    <li><a>SpaceX kiện chính phủ Mỹ vì bị gạt khỏi bản hợp đồng tên lửa trị giá 2 tỷ USD</a></li><br>
+                    <li><a>Nhà mạng Mỹ chính thức hủy đơn đặt hàng Samsung Galaxy Fold</a></li><br>
+                    <li><a>Nintendo chuyển dây chuyền sản xuất máy chơi game của mình ra khỏi Trung Quốc</a></li><br>
+                    <li><a>Trời nóng quá nên anh chàng YouTuber này quyết định độ tản nhiệt nước cho Galaxy S10</a></li><br>
+                    <li><a>Smartphone chơi game ASUS ROG Phone 2 sẽ được trang bị màn hình 120 Hz</a></li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <img src="images/logo.png">
+            <div id="info">
+                <p>Trang bán thiết bị điện tử uy tính, chất lượng.</p>
+                <p>Địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TPHCM - Hotline: 0123456789 </p>
+            </div>
+            <p style="text-align: center">&copy by Nhóm 21, June 2019</p>
+        </footer>
+    </body>
+</html>

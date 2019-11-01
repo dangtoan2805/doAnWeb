@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gỏi hàng</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/bag.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function login(){
+                var user=document.getElementById("txtUser").value;
+                var pass=document.getElementById("txtPass").value;
+                if(user==""){
+                    alert("User không được trống !");
+                    return false;
+                }
+                else if(pass==""){
+                    alert("Password không được trống !");
+                    return false;
+                }
+                else{
+                    alert("Xin chào, "+user+". Chúc bạn có một ngày tốt lành !");
+                }
+            }
+            function amount(txt)
+            {
+                var num=document.getElementById("num1").innerText;
+                var pri=document.getElementById("price").innerText;
+                var n=parseInt(num);          
+                if(txt=="add")
+                {               
+                    n=n+1;    
+                }
+                else{
+                    if(n==1){return;}
+                    n=n-1;
+                }
+                    document.getElementById("num1").innerHTML=n;
+                    document.getElementById("num2").innerHTML=n;
+                    pri=n*17490000;
+                    str=pri.toString();
+                    var price="";
+                    var d=parseInt((str.length)/3);                   
+                    price= str.substr(0,d);
+                    for(var i=d; i <str.length;i=i+3)
+                    {
+                        price=price+"."+str.substr(i,3);
+                    }
+                    document.getElementById("price").innerHTML=price+" VND"; 
+                    document.getElementById("temp").innerHTML=price+" VND";                  
+                
+            }
+            var ord=false;
+            function order(){
+                if(ord==true){
+                    alert("Đặt hàng thành công");
+                    return true;
+                }
+                else{
+                    alert("Bạn chưa nhập thông tin đặt hàng");
+                    return false;
+                }
+            }
+            function check()
+            {
+                var name=document.getElementById("name").value;
+                var phone=document.getElementById("phone").value;
+                var address=document.getElementById("address").value;
+                var noti=document.getElementById("erro");
+                if(name==""||name.length<3){
+                    noti.innerHTML="* Tên không được trống hoặc quá ngắn";
+                    return false;
+                }                
+                else if(isNaN(phone)){
+                    noti.innerText="* Số điện thoại không được là chữ";
+                    return false;
+                }
+                else if(phone.indexOf("0")!=0){
+                    noti.innerText="* Số điện thoại phải bắt đầu bằng số 0";
+                    return false;
+                }
+                else if(phone.length<10){
+                    noti.innerText="* Số điện thoại phải là 10 chữ số";
+                    return false;
+                }
+                else if(address==""||address.length<10){
+                    noti.innerText="* Bạn cần nhập địa chỉ đầy đủ và chính xác";
+                    return false;
+                }
+                else{
+                    noti.innerText="";
+                    ord=true;          
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" width="100">
+            <ul style="list-style-type: none">
+                <li><input id="txtSearch" type="text"></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/search.png" width="17"></a></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/bag.png" width="17"></a></li>
+                <li id="Login"><a >Đăng nhập</a>
+                    <div id="formLogin">
+                        <p>Tài khoản:</p>
+                        <input type="text" id="txtUser" width="80">
+                        <p>Mật khẩu:</p>
+                        <input type="password" id="txtPass" width="80">
+                        <input id="btnLogin" onclick="return login()" type="submit" value="Đăng nhập">
+                    </div>
+                </li>
+                <li ><a>|</a></li>
+                <li><a href="SignUp.html">Đăng kí</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li id="product"></a>Sản Phẩm</a>
+                    <ul id="sub_item1" >
+                        <li><a href="Laptop.html">Laptop</a>
+                            <ul class="sub_item2">
+                                <li><a href="Asus.html">Asus</a></li>
+                                <li><a href="Dell.html">Dell</a></li>
+                                <li><a href="HP.html">Hp</a></li>
+                                <li><a href="Lenovo.html">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Phone.html">Điện Thoại</a>
+                            <ul class="sub_item2">
+                                <li><a href="Samsung.html">SamSung</a></li>
+                                <li><a href="Nokia.html">Nokia</a></li>
+                                <li><a href="Vsmart.html">Vs Mart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tablet.html">Tablet</a>
+                            <ul class="sub_item2">
+                                <li><a href="Tablet_ss">SamSung</a></li>
+                                <li><a href="Tablet_hw">Huewai</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="Other.html">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Trang Chủ</a></li>
+                <li><a href="SaleOff.html">Khuyến mãi</a></li>
+                <li><a href="ListNews.html">Tin Tức</a></li>
+                <li><a href="Contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="container">
+            <h2>Giỏ hàng của bạn</h2>
+            <table>
+                <tr id="title">
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="product_bag">
+                            <img src="new/detail_product2.jpg">
+                            <div id="info_product">
+                                <h4>Laptop Dell Vostro 5481-V4I5229W (14" FHD/i5-8265U/4GB/1TB HDD/UHD 620/Win10/1.6 kg)</h4>
+                                <p><b>17.490.000 VND</b></p>
+                            </div>
+                            
+                        </div>
+                    </td>
+                    <td>
+                        <div id="amount" >
+                            <button onclick="amount('add')" id="add">+</button>
+                            <p id="num1">1</p>
+                            <button onclick="amount('reduce')" id="reduce">-</button>
+                        </div>
+                    </td>
+                </tr>
+                 <tr id="bill">
+                    <td><b>Tạm tính: </b></td>
+                    <td><b id="temp"> 17.490.000 VND </b></td>
+                </tr>
+                <tr>
+                    <td><b>Phí vận chuyển:</b></td>
+                    <td><b>0 VND </b></td>
+                </tr>
+                <tr>
+                    <td><b>Số lượng:</b></td>
+                    <td><b id="num2">1</b></td>
+                </tr>
+                <tr>
+                    <td><b>Thành tiền:</b></td>
+                    <td id="price">17.490.000 VND</td>
+                </tr>
+            </table>
+            <form id="formUser">
+                <p><b>Thông tin khách hàng</b></p>
+                <p id="erro" style="color: red"></p>
+                <input onkeyup="return check()" id="name" type="text" placeholder="Họ & Tên">
+                <input onkeyup="return check()" id="phone" type="text" placeholder="Số điện thoại">
+                <input onkeyup="return check()" id="address" type="text" placeholder="Địa chỉ">
+            </form>
+            <button onclick="return order()" id="confirm">Đặt hàng</button>
+        </div>
+        </main>
+        <footer>
+            <img src="images/logo.png">
+            <div id="info">
+                <p>Trang bán thiết bị điện tử uy tính, chất lượng.</p>
+                <p>Địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TPHCM - Hotline: 0123456789 </p>
+            </div>
+            <p style="text-align: center">&copy by Nhóm 21, June 2019</p>
+        </footer>
+    </body>
+</html>

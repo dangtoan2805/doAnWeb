@@ -1,0 +1,45 @@
+main{
+    width: 1200px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 110%;
+}
+
+            /*Article*/
+article{
+    float: left;
+    width: 900px;
+    text-align:center;
+    line-height: 30px;
+}
+article p{
+    font-size: 120%;
+    text-align: justify;
+}
+article img{
+    text-align: center;
+    margin-bottom: 20px;
+}
+article h1{
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+        /*--Side---*/
+#side{
+    float:right;
+    width: 250px;
+}
+#side h2{
+    font-size: 150%;
+    color: orangered;
+    border-bottom: 1px solid;
+}
+#side a{
+    color: #333;
+}
+#side a:hover{
+    color: orangered;
+    text-decoration: none;
+}

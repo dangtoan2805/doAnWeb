@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8">
+        <title>Liên hệ</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function login(){
+                var user=document.getElementById("txtUser").value;
+                var pass=document.getElementById("txtPass").value;
+                if(user==""){
+                    alert("User không được trống !");
+                    return false;
+                }
+                else if(pass==""){
+                    alert("Password không được trống !");
+                    return false;
+                }
+                else{
+                    alert("Xin chào, "+user+". Chúc bạn có một ngày tốt lành !");
+                }
+            }
+        </script>
+        <script>
+                var ar = new Array();
+                var i;
+                for(i=0;i<4;i++){
+                    ar[i]=false;
+                }
+                function checkEmp(){
+                    var data= new Array();
+                    data[0]="name";
+                    data[1]="phone";
+                    data[2]="mail";
+                    data[3]="txtContect";
+                    var i;
+                    for(i=0;i<data.length;i++)
+                    {
+                        if(document.getElementById(data[i]).value==""){
+                            document.getElementById(data[i]).style.border="1.5px solid red";
+                        }
+                        else{
+                            document.getElementById(data[i]).style.border="1px solid";
+                        }
+                    }
+                }              
+                function chName(){
+                    checkEmp();
+                    var noti=document.getElementById("notify");
+                    var n= document.getElementById("name").value;
+                    if(n.length<5){
+                        noti.innerHTML=" * Tên của bạn quá ngắn";
+                        ar[0]= false;
+                    }
+                    else{
+                        noti.innerHTML="";
+                        ar[0]= true;
+                    }
+                }
+                function chPhone(){
+                    checkEmp();
+                    var noti=document.getElementById("notify");
+                    var pho= document.getElementById("phone").value;
+                    var index=pho.indexOf("0");
+                    if(isNaN(pho)){
+                        noti.innerHTML=" * Số điện thoại không được là chữ";
+                        ar[1]= false;
+                    }
+                    else if(pho.length<9){
+                        noti.innerHTML="* Số điện thoại phải là 10 chữ số";
+                        ar[1]= false;
+                    }
+                    else if(index>0||index==-1){
+                        noti.innerHTML=" * Số điện thoại phải bắt đầu bằng số 0";
+                        ar[1]= false;
+                    }
+                    else{
+                        noti.innerHTML="";
+                        ar[1]= true;
+                    }
+                }            
+                function chMail(){
+                    checkEmp();
+                    var noti=document.getElementById("notify");
+                    var mail =document.getElementById("mail").value;
+                    var index=document.getElementById("mail").value.indexOf("@");
+                    var Dot=document.getElementById("mail").value.indexOf(".");
+                    if(index<1||Dot<(index+2)||(Dot+2)>=mail.length){
+                        noti.innerHTML="* Định dạng email không đúng !";
+                        ar[2]=false;
+                    }
+                    else{
+                        noti.innerHTML="";
+                        ar[2]=true;}
+                }
+                function chText(){
+                    checkEmp();
+                    var noti=document.getElementById("notify");
+                    var add= document.getElementById("txtContect").value;
+                    if(add.length<100){
+                        noti.innerHTML=" * Nội dung phải lớn hơn 100 ký tự";
+                        ar[3]= false;
+                    }
+                    else{
+                        noti.innerHTML="";
+                        ar[3]= true;
+                    }
+                }
+
+                function Check()
+                {
+                    checkEmp();
+                    var i;
+                    for(i=0;i<ar.length;i++)
+                    {
+                        if(ar[i]==false){
+                            alert("Vui lòng điền chính xác các thông tin !");
+                        return false;
+                        }              
+                    }      
+                }
+            </script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" width="100">
+            <ul style="list-style-type: none">
+                <li><input id="txtSearch" type="text"></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/search.png" width="17"></a></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/bag.png" width="17"></a></li>
+                <li id="Login"><a >Đăng nhập</a>
+                    <div id="formLogin">
+                        <p>Tài khoản:</p>
+                        <input type="text" id="txtUser" width="80">
+                        <p>Mật khẩu:</p>
+                        <input type="password" id="txtPass" width="80">
+                        <input id="btnLogin" onclick="return login()" type="submit" value="Đăng nhập">
+                    </div>
+                </li>
+                <li ><a>|</a></li>
+                <li><a href="SignUp.html">Đăng kí</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li id="product"></a>Sản Phẩm</a>
+                    <ul id="sub_item1" >
+                        <li><a href="Laptop.html">Laptop</a>
+                            <ul class="sub_item2">
+                                <li><a href="Asus.html">Asus</a></li>
+                                <li><a href="Dell.html">Dell</a></li>
+                                <li><a href="HP.html">Hp</a></li>
+                                <li><a href="Lenovo.html">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Phone.html">Điện Thoại</a>
+                            <ul class="sub_item2">
+                                <li><a href="Samsung.html">SamSung</a></li>
+                                <li><a href="Nokia.html">Nokia</a></li>
+                                <li><a href="Vsmart.html">Vs Mart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tablet.html">Tablet</a>
+                            <ul class="sub_item2">
+                                <li><a href="Tablet_ss">SamSung</a></li>
+                                <li><a href="Tablet_hw">Huewai</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="Other.html">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Trang Chủ</a></li>
+                <li><a href="SaleOff.html">Khuyến mãi</a></li>
+                <li><a href="ListNews.html">Tin Tức</a></li>
+                <li><a href="Contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main>
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.7331259031457!2d106.66670451142538!3d10.775557155486894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe05d6fe8218909be!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOZ2_huqFpIG5n4buvIC0gVGluIGjhu41jIFRQLC5IQ00!5e0!3m2!1svi!2s!4v1560138616661!5m2!1svi!2s" width="500" height="500" frameborder="0" style="border:0" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div id="formContact">
+                        <h2>Liên hệ chúng tôi</h2>
+                        <p id="notify" style="color: red"></p>
+                        <form>
+                            <table id="form">
+                                <tr>
+                                    <td class="req"><h4>Họ và tên: </h4></td>
+                                    <td class="input"><input onblur="chName()" id="name" type="text"></td>
+                                </tr>                              
+                                <tr>
+                                    <td class="req"><h4>Số điện thoại: </h4></td>
+                                    <td class="input"><input onblur="chPhone()" id="phone" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td class="req"><h4>Email: </h4></td>
+                                    <td class="input"><input onblur="chMail()"  id="mail" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <td class="req"><h4>Nội dung: </h4></td>
+                                    <td class="input"><textarea onblur="chText()" id="txtContect"></textarea></td>
+                                </tr>
+                            </table>
+                            <button name="Submit" onclick="return Check()" type="submit">Gửi</button>
+                        </form>
+                    </div>   
+                    <div id="infoStore" class="infomation">
+                            <h2>Thông tin liên hệ cửa hàng</h2>       
+                            <p><img src="images/home.png" width="15"> Đường 3/2, Phường 8, Q.10, TP.HCM</p>
+                            <p><img src="images/phone.png" width="15"> Hotline: 0123456789</p>
+                            <p><img src="images/mail.png" width="15"> xyz@abc.com</p>
+                            <p><img src="images/fb.png" width="15"> fb.com/abc</p>
+                    </div>
+                    <div id="infoStudent" class="infomation">
+                        <h2>Thông tin tác giả</h2>
+                        <span>
+                                <p><strong>Họ Tên SV: </strong>Đặng Việt Toàn</p>
+                                <p><b>MSSV: </b>17DH111072</p>   
+                                <hr>          
+                                <p><b>Họ Tên SV: </b>Đặng Việt Toàn</p>
+                                <p><b>MSSV: </b>17DH111072</p>
+                        </span>
+                        <span>
+                                <p><strong>Họ Tên SV: </strong>Đặng Việt Toàn</p>
+                                <p><b>MSSV: </b>17DH111072</p>             
+                                <hr>
+                                <p><b>Họ Tên SV: </b>Đặng Việt Toàn</p>
+                                <p><b>MSSV: </b>17DH111072</p>
+                        </span>
+                    </div>        
+        </main>
+        <footer>
+            <img src="images/logo.png">
+            <div id="info">
+                <p>Trang bán thiết bị điện tử uy tính, chất lượng.</p>
+                <p>Địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TPHCM - Hotline: 0123456789 </p>
+            </div>
+            <p style="text-align: center">&copy by Nhóm 21, June 2019</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+main{
+    width: 1100px;
+    margin: 0 auto;
+}
+#infoStore{
+    clear: both;
+    float: left;
+    margin-bottom: 2em;
+    height: 200px;
+}
+#infoStudent{
+    float: right;
+    margin-bottom: 2em;
+    height: 300px;
+}
+#infoStudent span{
+    display: inline-block;
+    padding-right: 1.5em;
+}
+.infomation p{
+    padding-top: 0.6em;
+}
+.infomation h2{
+    color: orangered;
+    border-bottom: 1px solid;
+}
+#map{
+    float: left;
+    width: 505px;
+    height: 505px;
+    border: 1px solid;
+    position: relative;
+    margin-bottom: 2em;
+    margin-top: 3em;
+}
+#map  iframe{
+    position: absolute;
+}
+        /*-----Form-----*/
+#formContact{
+    padding-top: 2em;
+    width: 550px;
+    height: 510px;
+    float: right;
+    text-align: center;
+}
+#form{
+    height:300px;
+}
+
+#form input, select{
+    padding: 5px;
+    outline: none;
+}
+.req{
+    text-align: right;
+    padding-right: 5px;
+}
+.input{
+    text-align: left;
+}
+button{
+    width: 100px;
+    height: 30px;
+}
+#txtContect{
+    padding: 5px;
+    width: 400px;
+    height: 130px;
+}
+#name,#phone,#mail{
+    width: 300px;
+}

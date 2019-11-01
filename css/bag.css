@@ -1,0 +1,91 @@
+main{
+    height: 538px;
+}
+#container{
+    width: 700px;
+    height: 540px;
+    margin: 0 auto;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 110%;
+    cursor: pointer;
+}
+main table{
+    margin: 0 auto;
+    border-bottom: 1px solid;
+}
+#container>h2{
+    color: orangered;
+}
+#title{
+    background: #333;
+    color: white;
+}
+#title th{
+    padding:5px 20px;
+    text-align: center;
+}
+        /*---*/
+
+#info_product{
+    width: 320px;
+    float: right;
+}
+#info_product p{
+    color: red;
+}
+#product_bag img{
+    width: 150px;
+    margin: 15px;
+    
+}
+            /*-- Amount--*/
+#amount{
+    text-align: center;
+}
+#amount p{ 
+    padding-top: 5px;
+}
+#add,#reduce{
+    margin-top: 0;
+    width: 30px; 
+    height: 30px;
+}
+
+#price{
+    color: red;
+    font-weight: bold;
+}   
+            /*-------Form--------*/
+#formUser{
+    text-align: center;
+    padding: 10px;
+}
+#name,#phone{
+    border: 1px solid;
+    outline: none;
+    border-radius: 10px;
+    width: 300px;
+    margin: 5px;
+    padding: 5px;
+}
+#address{
+    border: 1px solid;
+    outline: none;
+    border-radius: 10px;
+    width: 617px;
+    margin: 5px;
+    padding: 5px;
+}
+#confirm{
+    outline: none;
+    display: block;
+    text-align: center;
+    background: orangered;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+}

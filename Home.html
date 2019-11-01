@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8">
+        <title>Trang Chủ</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            function login(){
+                var user=document.getElementById("txtUser").value;
+                var pass=document.getElementById("txtPass").value;
+                if(user==""){
+                    alert("User không được trống !");
+                    return false;
+                }
+                else if(pass==""){
+                    alert("Password không được trống !");
+                    return false;
+                }
+                else{
+                    alert("Xin chào, "+user+". Chúc bạn có một ngày tốt lành !");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" width="100">
+            <ul style="list-style-type: none">
+                <li><input id="txtSearch" type="text"></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/search.png" width="17"></a></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/bag.png" width="17"></a></li>
+                <li id="Login"><a >Đăng nhập</a>
+                    <div id="formLogin">
+                        <p>Tài khoản:</p>
+                        <input type="text" id="txtUser" width="80">
+                        <p>Mật khẩu:</p>
+                        <input type="password" id="txtPass" width="80">
+                        <input id="btnLogin" onclick="return login()" type="submit" value="Đăng nhập">
+                    </div>
+                </li>
+                <li ><a>|</a></li>
+                <li><a href="SignUp.html">Đăng kí</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li id="product"></a>Sản Phẩm</a>
+                    <ul id="sub_item1" >
+                        <li><a href="Laptop.html">Laptop</a>
+                            <ul class="sub_item2">
+                                <li><a href="Asus.html">Asus</a></li>
+                                <li><a href="Dell.html">Dell</a></li>
+                                <li><a href="HP.html">Hp</a></li>
+                                <li><a href="Lenovo.html">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Phone.html">Điện Thoại</a>
+                            <ul class="sub_item2">
+                                <li><a href="Samsung.html">SamSung</a></li>
+                                <li><a href="Nokia.html">Nokia</a></li>
+                                <li><a href="Vsmart.html">Vs Mart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tablet.html">Tablet</a>
+                            <ul class="sub_item2">
+                                <li><a href="Tablet_ss">SamSung</a></li>
+                                <li><a href="Tablet_hw">Huewai</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="Other.html">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Trang Chủ</a></li>
+                <li><a href="SaleOff.html">Khuyến mãi</a></li>
+                <li><a href="ListNews.html">Tin Tức</a></li>
+                <li><a href="Contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="slide/dien-thoai-redmi-k20-pro-1.jpg" style="width: 100%;height: 600px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-7.jpg" style="width: 100%;height: 600px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-2.jpg" style="width: 100%;height: 600px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-9.jpg" style="width: 100%;height: 600px;">
+                        </div>
+                        <div class="item">
+                            <img src="slide/dien-thoai-redmi-k20-pro-12.jpg" style="width: 100%;height: 600px;">
+                        </div>
+                    </div> 
+            </div>
+            <div id="intro">
+                <h1>Giới thiệu</h1>
+                <p>Website thành lập với mục đích đem lại những sản phẩm về điện tử như Laptop, Điện Thoại, Tablet,... với chất lượng và giá cả tốt nhất cho người dùng. Với chính sách bảo hành lâu dài cùng với nhiều ưu đãi khi mua sản phẩm của website, giảm giá đặc biệt cho HS-SV khi mua hàng.</p>
+                <p>Đây là Website chính thức của Cửa hàng bạn có thể đặt hàng trên Website hoặc có thể đến trực tiếp cửa hàng ở địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TP.HCM.</p>
+                
+            </div>
+            <div id="news">
+                <h1>Tin tức mới</h1>
+                <div id="news01">
+                    <img src="item/new/img_new1.jpg" width="500">    
+                    <div id="content">
+                        <h2><a href="Detail_new.html">HTC có thể sắp hồi sinh thương hiệu Wildfire</a></h2>
+                        <p>Theo trang Mobil Telefon của Nga, gần đây HTC đã được cấp phép phát hành tổng cộng 10 thiết bị mới dưới thương hiệu Wildfire.</p>
+                        <p>Cụ thể, các mẫu máy này được HTC đặt tên như sau: Wildfire E, Wildfire E Plus, Wildfire E1, Wildfire E1 Plus, Wildfire E2, Wildfire E2 Plus, Wildfire E3, Wildfire E3 Plus, Wildfire R và Wildfire R Plus.</p>
+                    </div>
+                    
+                    <div class="clear" style="clear: both"><br>
+				</div>
+                </div>
+                <div id="more_news">
+                    <ul style="list-style-type: none">
+                        <li>
+                            <div>
+                                <img src="item/new/new2.jpg" >
+								<h4><a>Giảm 2 triệu cho Galaxy <br> S10|S10+ </a></h4>                              
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="item/new/new3.jpg">
+                                <h4><a>Tổng hợp deal khuyến mãi<br> 06/06</a></h4>
+                            </div>
+                        </li>
+                        <li>
+                            <div>		
+                                <img src="item/new/new4.jpg">
+                                <h4><a>Lenovo Z6 lộ ảnh thực tế <br>trên Weibo</a></h4>
+                            </div>
+                        </li>
+						 <li>
+                            <div>			
+                                <img src="item/new/new5.jpg">
+                                <h4><a>Lễ ra mắt Oppo Reno <br> tại Việt Nam</a></h4>
+                            </div>
+                        </li>																								
+                    </ul>
+                </div>
+                <p id="more"><a href="ListNews.html">Xem Thêm</a></p>
+            </div>
+            
+            <div id="container">
+                <h1>Sản phẩm mới</h1>
+                <ul>
+                    <li>
+                        <a>
+                            <img src="item/laptop/dell03.jpg">
+                            <h4>Laptop Dell G3 New 3579</h4>
+                            <p>20.500.000 VND</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="item/laptop/asus02.jpg">
+                            <h4>Laptop ASUS VivoBook S15</h4>
+                            <p>16.790.000 VND</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="item/laptop/hp02.jpg">
+                            <h4>Laptop HP 250 G7-6NY71PA</h4>
+                            <p>14.190.000 VND</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="item/phone/ss01.png" style="padding: 10px">
+                            <h4>Điện thoại Samsung Galaxy S10+</h4>
+                            <p>25.990.000 VND</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="item/phone/vs03.png" style="padding: 10px">
+                            <h4>Điện thoại Vsmart Active 1+ (64GB)</h4>
+                            <p>5.790.000 VND</p>
+                        </a>
+                    </li>
+                </ul>
+                <p id="more"><a href="SaleOff.html">Xem Thêm</a></p>   
+            </div>
+        </main>
+        <footer>
+            <img src="images/logo.png">
+            <div id="info">
+                <p>Trang bán thiết bị điện tử uy tính, chất lượng.</p>
+                <p>Địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TPHCM - Hotline: 0123456789 </p>
+            </div>
+            <p style="text-align: center">&copy by Nhóm 21, June 2019</p>
+        </footer>
+    </body>
+</html>

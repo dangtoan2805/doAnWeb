@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8">
+        <title>Đăng kí</title>
+        <link rel="icon" href="images/logo.png">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/signUp.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function login(){
+                var user=document.getElementById("txtUser").value;
+                var pass=document.getElementById("txtPass").value;
+                if(user==""){
+                    alert("User không được trống !");
+                    return false;
+                }
+                else if(pass==""){
+                    alert("Password không được trống !");
+                    return false;
+                }
+                else{
+                    alert("Xin chào, "+user+". Chúc bạn có một ngày tốt lành !");
+                }
+            }
+        </script>
+        <script>
+            var ar = new Array();
+            var i;
+            for(i=0;i<7;i++){
+                ar[i]=false;
+            }
+            function checkEmp(){
+                var data= new Array();
+                data[0]="name";
+                data[1]="age";
+                data[2]="address";
+                data[3]="phone";
+                data[4]="mail";
+                data[5]="user";
+                data[6]="pass";
+                data[7]="re-pass"; 
+                var i;
+                for(i=0;i<data.length;i++)
+                {
+                    if(document.getElementById(data[i]).value==""){
+                        document.getElementById(data[i]).style.border="1.5px solid red";
+                    }
+                    else{
+                        document.getElementById(data[i]).style.border="1px solid";
+                    }
+                }
+            }
+            
+            function chName(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var n= document.getElementById("name").value;
+                if(n.length<5){
+                    noti.innerHTML=" * Tên của bạn quá ngắn";
+                    ar[0]= false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[0]= true;
+                }
+            }
+            function chAge(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var age= document.getElementById("age").value;
+                if(isNaN(age)){
+                    noti.innerHTML=" * Tuổi phải là số";
+                    ar[1] =false;
+                }
+                else if(age<16){
+                    noti.innerHTML=" * Tuổi phải lớn hơn 16";
+                    ar[1] =false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[1]= true;
+                }
+            }
+            function chAdd(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var add= document.getElementById("address").value;
+                if(add.length<10){
+                    noti.innerHTML=" * Bạn cần nhập địa chỉ đầy đủ";
+                    ar[2]= false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[2]= true;
+                }
+            }
+            function chPhone(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var pho= document.getElementById("phone").value;
+                var index=pho.indexOf("0");
+                if(isNaN(pho)){
+                    noti.innerHTML=" * Số điện thoại không được là chữ";
+                    ar[3]= false;
+                }
+                else if(pho.length<9){
+                    noti.innerHTML="* Số điện thoại phải là 10 chữ số";
+                    ar[3]= false;
+                }
+                else if(index>0||index==-1){
+                    noti.innerHTML=" * Số điện thoại phải bắt đầu bằng số 0";
+                    ar[3]= false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[3]= true;
+                }
+            }
+            function chMail(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var mail =document.getElementById("mail").value;
+                var index=document.getElementById("mail").value.indexOf("@");
+                var Dot=document.getElementById("mail").value.indexOf(".");
+                if(index<1||Dot<(index+2)||(Dot+2)>=mail.length){
+                    noti.innerHTML="* Định dạng email không đúng !";
+                    ar[4]=false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[4]=true;}
+            }
+            function chUser(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var user= document.getElementById("user").value;
+                if(user.length<3){
+                    noti.innerHTML=" * Tên tài khoản của bạn quá ngắn";
+                    ar[5]= false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[5]= true;
+                }
+            }
+            function chRePass(){
+                checkEmp();
+                var noti=document.getElementById("notify");
+                var pa=document.getElementById("pass").value;
+                var rePass= document.getElementById("re-pass").value;
+                if(pa!=rePass){
+                    noti.innerHTML=" * Nhập lại mật khẩu không đúng !";
+                    ar[6]= false;
+                }
+                else{
+                    noti.innerHTML="";
+                    ar[6]= true;
+                }
+            }
+            function Check()
+            {
+                checkEmp();
+                var i;
+                for(i=0;i<ar.length;i++)
+                {
+                    if(ar[i]==false){
+                        alert("Vui lòng điền chính xác các thông tin !");
+                    return false;
+                    }              
+                }      
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" width="100">
+            <ul style="list-style-type: none">
+                <li><input id="txtSearch" type="text"></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/search.png" width="17"></a></li>
+                <li><a href="#" onclick="alert('Chức năng đang hoàn thiện !')"><img src="images/bag.png" width="17"></a></li>
+                <li id="Login"><a >Đăng nhập</a>
+                    <div id="formLogin">
+                        <p>Tài khoản:</p>
+                        <input type="text" id="txtUser" width="80">
+                        <p>Mật khẩu:</p>
+                        <input type="password" id="txtPass" width="80">
+                        <input id="btnLogin" onclick="return login()" type="submit" value="Đăng nhập">
+                    </div>
+                </li>
+                <li ><a>|</a></li>
+                <li><a href="#">Đăng kí</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li id="product"></a>Sản Phẩm</a>
+                    <ul id="sub_item1" >
+                        <li><a href="Laptop.html">Laptop</a>
+                            <ul class="sub_item2">
+                                <li><a href="Asus.html">Asus</a></li>
+                                <li><a href="Dell.html">Dell</a></li>
+                                <li><a href="HP.html">Hp</a></li>
+                                <li><a href="Lenovo.html">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Phone.html">Điện Thoại</a>
+                            <ul class="sub_item2">
+                                <li><a href="Samsung.html">SamSung</a></li>
+                                <li><a href="Nokia.html">Nokia</a></li>
+                                <li><a href="Vsmart.html">Vs Mart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Tablet.html">Tablet</a>
+                            <ul class="sub_item2">
+                                <li><a href="Tablet_ss">SamSung</a></li>
+                                <li><a href="Tablet_hw">Huewai</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="Other.html">Phụ kiện</a></li>
+                    </ul>
+                </li>
+                <li><a href="Home.html">Trang Chủ</a></li>
+                <li><a href="SaleOff.html">Khuyến mãi</a></li>
+                <li><a href="ListNews.html">Tin Tức</a></li>
+                <li><a href="Contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Đăng kí thành viên</h1>
+            <p id="notify"></p>
+                <form>
+                    <table id="form">
+                        <tr>
+                            <td class="req">Họ & Tên :</td>
+                            <td class="input"><input onblur="chName()" id="name" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Tuổi :</td>
+                            <td class="input"><input onblur="chAge()" id="age" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Giới tính :</td>
+                            <td class="input">
+                                <select name="Gender" id="gender" >
+                                    <option>Nam</option>
+                                    <option>Nữ</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="req">Địa chỉ :</td>
+                            <td class="input"><input onblur="chAdd()" id="address" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Số điện thoại :</td>
+                            <td class="input"><input onblur="chPhone()" id="phone" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Email :</td>
+                            <td class="input"><input onblur="chMail()"  id="mail" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Tên tài khoản :</td>
+                            <td class="input"><input onblur="chUser()"  id="user" type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Mật khẩu :</td>
+                            <td class="input"><input id="pass" type="password"></td>
+                        </tr>
+                        <tr>
+                            <td class="req">Nhập lại mật khẩu :</td>
+                            <td class="input"><input onblur="chRePass()" id="re-pass" type="password"></td>
+                        </tr>
+                    </table> 
+                    <div id="btn">
+                        <button name="signUp" onclick="return Check()" type="submit">Đăng kí</button>
+                        <button type="reset">Xóa tất cả</button>
+                    </div>   
+                </form>         
+        </main>  
+        </main>
+        <footer>
+            <img src="images/logo.png">
+            <div id="info">
+                <p>Trang bán thiết bị điện tử uy tính, chất lượng.</p>
+                <p>Địa chỉ: 123 Nguyễn Tri Phương, P8, Q.10, TPHCM - Hotline: 0123456789 </p>
+            </div>
+            <p style="text-align: center">&copy by Nhóm 21, June 2019</p>
+        </footer>
+    </body>
+</html>
